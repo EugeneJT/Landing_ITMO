@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require('gulp'); 
 var browserSync = require('browser-sync').create();
 
 //Задача умолчанию, перед которой выполнится задача ['webserver']:
@@ -18,5 +18,3 @@ gulp.task('browser-sync', function() {
         }
     });
 });
-
-

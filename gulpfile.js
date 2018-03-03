@@ -1,23 +1,22 @@
-
-var gulp = require('gulp'); 
-var webserver = require('gulp-webserver');
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
 
 //Задача умолчанию, перед которой выполнится задача ['webserver']:
-gulp.task('default',['webserver'], function () {
-    gulp.watch('dev/**/*', ['build']);
+gulp.task('default',['build', 'browser-sync'], function () {
+    gulp.watch('dev/**/*', ['build']).on('change', browserSync.reload);
 });
-
 //Задача 'build':
 gulp.task('build', function () {
-    return gulp.src('dev/*.html')
-           .pipe(gulp.dest('public'));
+    return gulp.src('site/**/*')
+           .pipe(gulp.dest('../public'));
 });
 
-//Новая задача 'webserver', перед которой выполнится задача ['build']:
-gulp.task('webserver', ['build'], function() {
-    gulp.src('public')
-    .pipe(webserver({
-        livereload: true,
-        open: true
-    }));
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "../public"
+        }
+    });
 });
+
+

@@ -1,7 +1,22 @@
+.main {
+    background: url(../img/slide_03.jpg) no-repeat center top / cover;
+    min-height: 68vh;
+    height: 100vh;
+    max-width: 100vw;
+    padding-top: 20px;
+    animation: sliding 10s ease infinite 0s alternate;
+}
 
-header {
-	background: url(../img/slide_03.jpg) no-repeat center top / cover;
-	height: 100vh;
+@keyframes sliding {
+    0% {
+        background-image: url(../img/slide_03.jpg);
+    }
+    50% {
+        background-image: url(../img/slide_02.jpg);
+    }
+    100% {
+        background-image: url(../img/slide_01.jpg);
+    }
 }
 
 .container {
@@ -42,17 +57,20 @@ nav {
 .titles {
 	color: #f4ffe1;
 	text-align: center;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55vw;
 }
 
 .titles__first {
-	font-size: 19px;
+	font-size: 1.2rem;
 	text-transform: uppercase;
-	margin-top: 200px;
 }
 
 h1 {
 	color: #fff;
-	font-size: 45px;
+	font-size: 2rem;
 	text-transform: uppercase;
 	margin-top:  10px;
 }

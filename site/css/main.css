@@ -13,6 +13,14 @@
     animation: sliding 10s ease infinite 0s alternate;
 }
 
+.row::after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 @keyframes sliding {
     0% {
         background-image: url(../img/slide_03.jpg);
@@ -41,7 +49,6 @@
 }
 
 nav {
-	
 	margin-top: 70px;
 }
 
@@ -79,13 +86,6 @@ nav {
 	text-transform: uppercase;
 }
 
-h1 {
-	color: #fff;
-	font-size: 2rem;
-	text-transform: uppercase;
-	margin-top:  10px;
-}
-
 .button {
 	background: #a2cf8e;
 	color: #f4ffe1;
@@ -99,6 +99,13 @@ h1 {
 	text-transform: uppercase;
 	font-size: 0.8rem;
 	margin-top: 35px;
+}
+
+h1 {
+	color: #fff;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-top:  10px;
 }
 
 h2 {
@@ -119,23 +126,13 @@ h2::after {
     margin-top: 10px;
 }
 
-.row::after {
-    content: ".";
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-
-
 #services {
 	background-color: #f4f4f4;
 	padding-bottom: 80px;
 }
 
-.box-group .col-3 .box {
-    margin: 0 15px;
+.title {
+	padding-bottom: 80px;
 }
 
 .box {
@@ -145,6 +142,7 @@ h2::after {
     margin-bottom: 20px;
     max-width: 300px;
     text-align: center;
+    margin: 0 15px;
 }
 
 .box p {
@@ -153,13 +151,7 @@ h2::after {
 	line-height: 1.55em;
 }
 
-.title {
-	padding-bottom: 80px;
-}
-
-
 #offer {
-	height: 570px;
 	background: url(../img/what-we-do-bg.png) no-repeat center top / cover;
 	padding-top: 100px;
 	text-align: left;
@@ -167,11 +159,24 @@ h2::after {
 	color: #fff;
 }
 
-.photo__food {
-	margin-left: 50px;
+.offers {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 -15px;
+	padding-bottom: 80px;
 }
 
-.buttons a.button {
+.offers__box {
+	margin: 0 15px;
+	width: 555px;
+}
+
+.offers__box img {
+	width: 100%;
+}
+
+a.button {
 	display: inline-block;
 	width: 140px;
 	margin-right: 20px; 

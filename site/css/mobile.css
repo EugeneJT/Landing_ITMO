@@ -27,6 +27,18 @@
         margin-bottom: 15px;
     }
 
+    .offers {
+    	margin: 0;
+    }
+
+    .offers__box {
+    	margin: 0;
+    	max-width: 50%;
+    }
+
+
+
+
 }
 
 @media (max-width: 840px) {
@@ -55,5 +67,9 @@
   	.col-3 {
         width: 100%;
     }
-
+	
+	.offers__box {
+		max-width: 100%;
+		margin: 10% 0;
+	}
   	

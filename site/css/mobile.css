@@ -1,7 +1,40 @@
 @media (max-width: 1400px) {
 	
+	.container {
+        max-width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 	.heading {
 		min-width: 85vw;
 	}
 
+    .main {
+        min-height: auto;
+	}
+
 }
+
+@media (max-width: 840px) {
+    
+    section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .titles {
+        width: auto;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: column wrap;
+  	}
+
+  	.menu li {
+  		padding-bottom: 5%;
+  		font-size: 1rem;
+  	}
